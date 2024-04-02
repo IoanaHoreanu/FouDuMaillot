@@ -1,22 +1,36 @@
 import { Link } from 'react-router-dom';
-import "../styles/NavBar.scss";
+import "../styles/NavBar.css";
+import logo from "../assets/FouDuMaillot.png";
+import panierIcon from "../assets/panier.png";
+//import utilisateurIcon from "../assets/utilisateur_icon.svg";
 
-function Navbar() {
-  return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Accueil</Link>
-        </li>
-        <li>
-          <Link to="/catalogue">Catalogue</Link>
-        </li>
-        <li>
-          <Link to="/a-propos">À propos</Link>
-        </li>
-      </ul>
-    </nav>
-  );
-}
+const Navbar = () => {
+    return (
+      <div>
+        <nav className="navContainer">
+            <Link to="/">
+                <img src={logo} alt="logo" className="logoNavbar" />
+            </Link>
+            <ul className="ulNavbar">
+            <li>
+                <Link to="/">ACCUEIL</Link>
+            </li>
+            <li >
+                <Link to="/catalogue">CATALOGUE</Link>
+            </li>
+            <li>
+                <Link to="/About">A PROPOS</Link>
+            </li> 
+            </ul>
+            <div className="basketContainer">
+                <Link to="/panier">
+                    <img className="basketNav" src={panierIcon} alt="basket_icon" />
+                </Link>
+            </div>
+        </nav>
+      </div>
+    );
+  };
+  
 
 export default Navbar;
