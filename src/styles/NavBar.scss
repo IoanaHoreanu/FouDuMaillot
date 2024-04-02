@@ -1,0 +1,29 @@
+nav {
+    background-color: #333; /* Couleur de fond de la navbar */
+    padding: 10px; /* Espacement intérieur */
+  }
+  
+  ul {
+    list-style-type: none; /* Supprime les puces de liste */
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    display: inline; /* Affichage en ligne pour aligner les éléments horizontalement */
+    margin-right: 20px; /* Espacement entre les éléments */
+  }
+  
+  li:last-child {
+    margin-right: 0; /* Pas de marge à droite pour le dernier élément */
+  }
+  
+  a {
+    text-decoration: none; /* Supprime les soulignements par défaut des liens */
+    color: white; /* Couleur du texte des liens */
+  }
+  
+  a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+  }
+  
