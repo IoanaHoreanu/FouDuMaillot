@@ -3,7 +3,7 @@ const db = require("./db");
 
 const findOne = async (id) => {
   try {
-    const [user] = await db.query("select * from `user` where id = ?", [id]);
+    const [user] = await db.query("select * from `Utilisateurs` where id = ?", [id]);
     return user;
   } catch (error) {
     console.error(error);
@@ -12,7 +12,7 @@ const findOne = async (id) => {
 
 const findByEmail = async (email) => {
   try {
-    const [user] = await db.query("select * from `user` where email = ?", [
+    const [user] = await db.query("select * from `Utilisateurs` where email = ?", [
       email,
     ]);
     return user;
@@ -25,7 +25,7 @@ const addOne = async (user) => {
   try {
     const { name, email, password } = user;
     const [result] = await db.query(
-      "insert into `user` (name, email, password) values (?,?,?)",
+      "insert into `Utilisateurs` (name, email, password) values (?,?,?)",
       [name, email, password]
     );
     return { id: result.insertId, name, email };
