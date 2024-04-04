@@ -1,10 +1,13 @@
+import Article from "../components/Article";
 import Navbar from "../components/NavBar";
 
 function Catalogue() {
     return (
-        <header>
+        <><header>
             <Navbar />
-        </header>
+        </header><main>
+                <Article />
+            </main></>
     )
 }
 

@@ -1,6 +1,15 @@
 /* eslint-disable no-undef */
 const db = require("./db");
 
+const findAll = async () => {
+  try {
+    const [user] = await db.query("select * from Utilisateurs");
+    return user;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 const findOne = async (id) => {
   try {
     const [user] = await db.query("select * from `Utilisateurs` where id = ?", [id]);
@@ -33,4 +42,4 @@ const addOne = async (user) => {
     console.log(err);
   }
 };
-module.exports = { findOne, addOne, findByEmail };
+module.exports = { findOne, addOne, findByEmail , findAll};

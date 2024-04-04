@@ -1,7 +1,16 @@
 /* eslint-disable no-undef */
-const { findOne, addOne } = require("../model/userModel");
+const { findOne, addOne, findAll } = require("../model/userModel");
 const validateUser = require("../validator/userValidator");
 const { hashPassword } = require("../helper/argonHelper");
+
+const getAll = async (req, res) => {
+  try {
+    const user = await findAll();
+    res.json(user);
+  } catch (error) {
+    res.sendStatus(500);
+  }
+};
 
 const getOne = async (req, res) => {
   const userId = parseInt(req.params.id);
@@ -35,4 +44,4 @@ const createOne = async (req, res) => {
   }
 };
 
-module.exports = { getOne, createOne };
+module.exports = { getOne, createOne, getAll };
