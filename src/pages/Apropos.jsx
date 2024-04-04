@@ -1,10 +1,18 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/NavBar";
+import BrandPresentation from "../components/Presentation";
 
 function Apropos() {
     return (
-        <header>
+        <><header>
             <Navbar />
         </header>
+        <main>
+            <BrandPresentation />
+        </main>
+        <footer>
+            <Footer />
+        </footer></>
     )
 }
 

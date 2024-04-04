@@ -19,7 +19,7 @@ const Navbar = () => {
                 <Link to="/catalogue">CATALOGUE</Link>
             </li>
             <li>
-                <Link to="/About">A PROPOS</Link>
+                <Link to="/apropos">A PROPOS</Link>
             </li> 
             </ul>
             <div className="basketContainer">
