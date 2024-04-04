@@ -9,6 +9,7 @@ CREATE TABLE Articles (
     id INT AUTO_INCREMENT PRIMARY KEY,
     titre VARCHAR(255) NOT NULL,
     contenu TEXT,
-    prix INT NOT NULL,
+    prix DECIMAL(10, 2) NOT NULL
 );
+
 

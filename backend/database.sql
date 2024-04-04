@@ -1,11 +1,11 @@
-INSERT INTO utilisateurs (
+INSERT INTO Utilisateurs (
   nom,  email, password, 
 ) VALUES 
-('John', 'john.doe@example.com', '$2b$10$3Uh/iPqEX0slndJf0OTrHu3lW3vIzAKg7rUE9H3jU5Fojtum1qT4.'),
-('Jane', 'jane.smith@example.com', '$2b$10$ALIzE5/O82fjCg5dvcIwhuMjDwYZ0PYOWfPPiMWlP8Qj/J2aFJweG'),
-('Alice', 'alice.johnson@example.com', '$2b$10$E6Yfy8Z0FRl.SIIZeOFaFeXPK4w/8V05KMCVWi5fBzRv0w4GQtmxC'),
-('Bob', 'bob.brown@example.com', '$2b$10$uyGQgWQFfCWkGdWh7cmo4.MG1gwXqpd/nAJXXaSKuySGbupTtE1o2'),
-('Emily','emily.wilson@example.com', '$2b$10$nx28QZ.VH7y9rFm/7cKSM.zF5vcCx8iK01opADbKmYnBkavYXxRO2'),
+('John', 'john.doe@example.com', 'coucou'),
+('Jane', 'jane.smith@example.com', '12345'),
+('Alice', 'alice.johnson@example.com', 'hello'),
+('Bob', 'bob.brown@example.com', 'blabla'),
+('Emily','emily.wilson@example.com', '9874'),
 
 INSERT INTO articles (
   nom, contenu, prix
