@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const { findAll, findOne } = require("../model/articleModel");
+const { findAll, findOne, createArticle, updateArticle, deleteArticle } = require("../model/articleModel");
 
 const getAll = async (req, res) => {
   try {
@@ -27,4 +27,38 @@ const getOne = async (req, res) => {
   }
 };
 
-module.exports = { getAll, getOne };
+const create = async (req, res) => {
+  const { titre, contenu, prix } = req.body;
+  try {
+    const result = await createArticle(titre, contenu, prix);
+    res.json(result);
+  } catch (error) {
+    console.error(error);
+    res.sendStatus(500);
+  }
+};
+
+const update = async (req, res) => {
+  const articleId = parseInt(req.params.id);
+  const { titre, contenu, prix } = req.body;
+  try {
+    const result = await updateArticle(articleId, titre, contenu, prix);
+    res.json(result);
+  } catch (error) {
+    console.error(error);
+    res.sendStatus(500);
+  }
+};
+
+const remove = async (req, res) => {
+  const articleId = parseInt(req.params.id);
+  try {
+    const result = await deleteArticle(articleId);
+    res.json(result);
+  } catch (error) {
+    console.error(error);
+    res.sendStatus(500);
+  }
+};
+
+module.exports = { getAll, getOne, create, update, remove };
